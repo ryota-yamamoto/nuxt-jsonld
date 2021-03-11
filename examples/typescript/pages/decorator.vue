@@ -5,6 +5,7 @@
     </h1>
     <button @click="() => count++">+</button><br>
     <nuxt-link to="/">Options API</nuxt-link>
+    <nuxt-link to="/composition">Composition API</nuxt-link>
   </div>
 </template>
 
@@ -12,6 +13,7 @@
 import Vue from 'vue'
 import Component from 'vue-class-component'
 import { Jsonld } from 'nuxt-jsonld'
+import { WithContext, Product } from 'schema-dts'
 
 @Jsonld
 @Component
@@ -19,12 +21,12 @@ export default class Sample extends Vue {
   name = 'vue.js'
   count = 0
 
-  jsonld(): object {
+  jsonld(): WithContext<Product> {
     return {
       '@context': "https://schema.org",
       "@type": "Product",
       name: this.name,
-      count: this.count,
+      productID: this.count.toString(),
     };
   }
 }

@@ -30,7 +30,8 @@
   ],
   "typings": "./lib/index.d.ts",
   "dependencies": {
-    "schema-dts": "^0.8.2"
+    "schema-dts": "^0.8.2",
+    "@vue/composition-api": "^1.0.0-beta.14"
   },
   "devDependencies": {
     "@semantic-release/changelog": "^5.0.1",

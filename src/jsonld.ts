@@ -31,6 +31,7 @@ class JsonldManager {
       throw new Error('must be initialized before refreshing');
     }
 
+    this.root.$options.head = this.root.$options.head || {};
     this.root.$options.head.script = this.root.$options.head.script || [];
 
     const json = Object.entries(this.data)

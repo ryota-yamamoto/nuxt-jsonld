@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Jsonld from '../src/decorator';
+import { Jsonld } from '../src/decorator';
 
 describe('Jsonld decorator', () => {
   it('does nothing when jsonld does not exist', () => {

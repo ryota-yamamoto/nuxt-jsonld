@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxtjs/composition-api": "^0.12.5",
     "nuxt": "^2.14.5",
     "nuxt-jsonld": "file:../../lib",
     "vue-class-component": "^7.2.5"

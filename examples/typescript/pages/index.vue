@@ -5,6 +5,7 @@
     </h1>
     <button @click="() => count++">+</button><br>
     <nuxt-link to="/decorator">Class API</nuxt-link>
+    <nuxt-link to="/composition">Composition API</nuxt-link>
   </div>
 </template>
 
