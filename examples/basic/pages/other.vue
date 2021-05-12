@@ -1,9 +1,9 @@
 <template>
   <div>
     <h1>
-      example　{{ count }}
+      example 2　{{ count }}
     </h1>
-    <nuxt-link to="other">other</nuxt-link>
+    <nuxt-link to="/">index</nuxt-link>
     <button @click="() => count++">+</button><br>
   </div>
 </template>
@@ -16,15 +16,10 @@ export default {
       count: 0,
     }
   },
-  head() {
-    return {
-      title: 'top'
-    }
-  },
   jsonld() {
     return {
       '@context': "https://schema.org",
-      "@type": "Product",
+      "@type": "Product2",
       name: this.name,
       count: this.count,
     };

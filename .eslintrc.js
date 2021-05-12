@@ -12,10 +12,11 @@ module.exports = {
   extends: ['airbnb-base', 'plugin:prettier/recommended'],
   plugins: ['prettier', '@typescript-eslint'],
   rules: {
-    'no-underscore-dangle': ['error', { allow: ['_uid', '__dangerouslyDisableSanitizersByTagID'] }],
+    'no-underscore-dangle': ['error', { allow: ['_uid', '__dangerouslyDisableSanitizersByTagID', '_jsonld'] }],
     'no-param-reassign': ['error', { props: false }],
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': 'error',
+    'no-console': ['error', { allow: ['warn', 'error'] }],
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
     'import/extensions': [
       'error',
       'ignorePackages',
