@@ -8,9 +8,11 @@
     "target": "es5",
     "sourceMap": false,
     "declaration": true,
-    "lib": ["es2015", "es2017", "dom"]
+    "lib": ["es2015", "es2017", "dom"],
+    "types": ["@types/node"],
+    "typeRoots": ["types"]
   },
   "include": [
-    "src/**/*"
+    "src/**/*", "types"
   ],
 }

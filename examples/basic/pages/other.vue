@@ -1,36 +1,38 @@
 <template>
   <div>
     <h1>
-      example　{{ count }}
+      example 2　{{ count }}
     </h1>
-    <nuxt-link to="other">other</nuxt-link>
+    <nuxt-link to="/">index</nuxt-link>
     <button @click="() => count++">+</button><br>
+    <Sample/>
   </div>
 </template>
 
 <script>
+import Sample from "@/components/Sample"
+
 export default {
+  components: {
+    Sample
+  },
+  head() {
+    return {
+      title: "other page"
+    }
+  },
   data() {
     return {
       name: 'vue.js',
       count: 0,
     }
   },
-  head() {
-    return {
-      title: 'top'
-    }
-  },
   jsonld() {
-    if (this.count % 5 === 0) {
-      return null
-    }
-
     return {
       '@context': "https://schema.org",
       "@type": "Product",
       name: this.name,
-      count: this.count,
+      productID: this.count.toString(),
     };
   },
 }

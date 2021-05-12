@@ -2,16 +2,17 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "module": "esnext",
-    "experimentalDecorators": true,
     "declaration": false,
     "allowJs": true,
     "noEmit": true,
     "types": [
+      "@types/node",
       "@types/jest"
-    ],
+    ]
   },
   "include": [
     "/src/**/*",
-    "./test/**/*"
+    "./test/**/*",
+    "types"
   ]
 }
